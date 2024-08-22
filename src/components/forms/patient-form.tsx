@@ -1,6 +1,6 @@
 'use client';
 
-import CustomFormField from '@/components/custom-form-field';
+import CustomFormField, { FormFieldType } from '@/components/custom-form-field';
 import SubmitButton from '@/components/submit-button';
 import { Form } from '@/components/ui/form';
 import { createUser } from '@/lib/actions/patient.actions';
@@ -10,16 +10,6 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-
-export enum FormFieldType {
-  INPUT = 'input',
-  TEXTAREA = 'textarea',
-  PHONE_INPUT = 'phoneInput',
-  CHECKBOX = 'checkbox',
-  DATE_PICKER = 'datePicker',
-  SELECT = 'select',
-  SKELETON = 'skeleton',
-}
 
 const PatientForm = () => {
   const router = useRouter();
