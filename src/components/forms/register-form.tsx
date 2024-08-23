@@ -347,8 +347,6 @@ const RegisterForm = ({ user }: Props) => {
           />
         </div>
 
-        <div className="flex flex-col gap-6 xl:flex-row"></div>
-
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>
     </Form>

@@ -30,7 +30,7 @@ export interface Appointment extends Models.Document {
   status: Status;
   primaryPhysician: string;
   reason: string;
-  note: string;
+  notes: string;
   userId: string;
   cancellationReason: string | null;
 }

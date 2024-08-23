@@ -9,8 +9,8 @@ interface Props {
   };
 }
 
-const UserRegisterPage = async ({ params: { id } }: Props) => {
-  const user = await getUser(id);
+const UserRegisterPage = async ({ params: { id: userId } }: Props) => {
+  const user = await getUser(userId);
 
   return (
     <div className="flex h-screen max-h-screen">

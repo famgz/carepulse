@@ -86,7 +86,7 @@ export const CreateAppointmentSchema = z.object({
     .string()
     .min(2, charsMessage('Reason', 'min', 2))
     .max(500, charsMessage('Reason', 'max', 500)),
-  note: z.string().optional(),
+  notes: z.string().optional(),
   cancellationReason: z.string().optional(),
 });
 
@@ -94,7 +94,7 @@ export const ScheduleAppointmentSchema = z.object({
   primaryPhysician: z.string().min(2, 'Select at least one doctor'),
   schedule: z.coerce.date(),
   reason: z.string().optional(),
-  note: z.string().optional(),
+  notes: z.string().optional(),
   cancellationReason: z.string().optional(),
 });
 
@@ -102,7 +102,7 @@ export const CancelAppointmentSchema = z.object({
   primaryPhysician: z.string().min(2, 'Select at least one doctor'),
   schedule: z.coerce.date(),
   reason: z.string().optional(),
-  note: z.string().optional(),
+  notes: z.string().optional(),
   cancellationReason: z
     .string()
     .min(2, charsMessage('Reason', 'min', 2))
