@@ -1,16 +1,18 @@
 import RegisterForm from '@/components/forms/register-form';
 import { getUser } from '@/lib/actions/patient.actions';
 import Image from 'next/image';
-import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 interface Props {
   params: {
-    id: string;
+    userId: string;
   };
 }
 
-const UserRegisterPage = async ({ params: { id: userId } }: Props) => {
+const UserRegisterPage = async ({ params: { userId: userId } }: Props) => {
   const user = await getUser(userId);
+
+  if (!user) return notFound();
 
   return (
     <div className="flex h-screen max-h-screen">
