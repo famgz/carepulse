@@ -29,7 +29,7 @@
 @layer utilities {
   /* ===== UTILITIES */
   .sidebar {
-    @apply remove-scrollbar w-full max-w-72 flex-col overflow-auto bg-black-800 px-7 py-10;
+    @apply remove-scrollbar bg-black-800 w-full max-w-72 flex-col overflow-auto px-7 py-10;
   }
 
   .left-sidebar {
@@ -105,7 +105,7 @@
 
   /* ==== File Upload */
   .file-upload {
-    @apply text-12-regular flex cursor-pointer  flex-col items-center justify-center gap-3 rounded-md border border-dashed border-dark-500 bg-dark-400 p-5;
+    @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-dark-500 bg-dark-400 p-5;
   }
 
   .file-upload_label {
@@ -128,7 +128,7 @@
   }
 
   .table-actions {
-    @apply flex w-full items-center justify-between space-x-2 p-4;
+    @apply flex w-full items-center justify-center gap-6 p-4;
   }
 
   /* ===== ALIGNMENTS */
@@ -142,43 +142,43 @@
 
   /* ===== TYPOGRAPHY */
   .text-36-bold {
-    @apply text-[36px] leading-[40px] font-bold;
+    @apply text-[36px] font-bold leading-[40px];
   }
 
   .text-24-bold {
-    @apply text-[24px] leading-[28px] font-bold;
+    @apply text-[24px] font-bold leading-[28px];
   }
 
   .text-32-bold {
-    @apply text-[32px] leading-[36px] font-bold;
+    @apply text-[32px] font-bold leading-[36px];
   }
 
   .text-18-bold {
-    @apply text-[18px] leading-[24px] font-bold;
+    @apply text-[18px] font-bold leading-[24px];
   }
 
   .text-16-semibold {
-    @apply text-[16px] leading-[20px] font-semibold;
+    @apply text-[16px] font-semibold leading-[20px];
   }
 
   .text-16-regular {
-    @apply text-[16px] leading-[20px] font-normal;
+    @apply text-[16px] font-normal leading-[20px];
   }
 
   .text-14-medium {
-    @apply text-[14px] leading-[18px] font-medium;
+    @apply text-[14px] font-medium leading-[18px];
   }
 
   .text-14-regular {
-    @apply text-[14px] leading-[18px] font-normal;
+    @apply text-[14px] font-normal leading-[18px];
   }
 
   .text-12-regular {
-    @apply text-[12px] leading-[16px] font-normal;
+    @apply text-[12px] font-normal leading-[16px];
   }
 
   .text-12-semibold {
-    @apply text-[12px] leading-[16px] font-semibold;
+    @apply text-[12px] font-semibold leading-[16px];
   }
 
   /* =====  SHADCN OVERRIDES */
@@ -191,7 +191,7 @@
   }
 
   .shad-gray-btn {
-    @apply border border-dark-500 cursor-pointer bg-dark-400 text-white !important;
+    @apply cursor-pointer border border-dark-500 bg-dark-400 text-white !important;
   }
 
   .shad-input-label {
@@ -199,15 +199,15 @@
   }
 
   .shad-input {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply h-11 border-dark-500 bg-dark-400 placeholder:text-dark-600 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .shad-input-icon {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply h-11 border-dark-500 bg-dark-400 placeholder:text-dark-600 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .shad-textArea {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply border-dark-500 bg-dark-400 placeholder:text-dark-600 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .shad-combobox-item {
@@ -219,15 +219,15 @@
   }
 
   .shad-select-trigger {
-    @apply bg-dark-400  placeholder:text-dark-600 border-dark-500 h-11 focus:ring-0 focus:ring-offset-0 !important;
+    @apply h-11 border-dark-500 bg-dark-400 placeholder:text-dark-600 focus:ring-0 focus:ring-offset-0 !important;
   }
 
   .shad-select-content {
-    @apply bg-dark-400 border-dark-500 !important;
+    @apply border-dark-500 bg-dark-400 !important;
   }
 
   .shad-dialog {
-    @apply bg-dark-400 border-dark-500 !important;
+    @apply border-dark-500 bg-dark-400 !important;
   }
 
   .shad-dialog button {
@@ -239,7 +239,7 @@
   }
 
   .shad-table {
-    @apply rounded-lg overflow-hidden !important;
+    @apply overflow-hidden rounded-lg !important;
   }
 
   .shad-table-row-header {
@@ -251,15 +251,15 @@
   }
 
   .shad-otp {
-    @apply w-full flex justify-between !important;
+    @apply flex w-full justify-between !important;
   }
 
   .shad-otp-slot {
-    @apply text-36-bold justify-center flex border border-dark-500 rounded-lg size-16 gap-4 !important;
+    @apply text-36-bold flex size-16 justify-center gap-4 rounded-lg border border-dark-500 !important;
   }
 
   .shad-alert-dialog {
-    @apply space-y-5 bg-dark-400 border-dark-500 outline-none !important;
+    @apply space-y-5 border-dark-500 bg-dark-400 outline-none !important;
   }
 
   .shad-sheet-content button {
@@ -268,12 +268,12 @@
 
   /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
   .input-phone {
-    @apply mt-2 h-11 rounded-md px-3 text-sm border bg-dark-400 placeholder:text-dark-600 border-dark-500 !important;
+    @apply mt-2 h-11 rounded-md border border-dark-500 bg-dark-400 px-3 text-sm placeholder:text-dark-600 !important;
   }
 
   /* =====  REACT DATE PICKER OVERRIDES */
   .date-picker {
-    @apply overflow-hidden border-transparent w-full placeholder:text-dark-600  h-11 text-14-medium rounded-md px-3 outline-none !important;
+    @apply text-14-medium h-11 w-full overflow-hidden rounded-md border-transparent px-3 outline-none placeholder:text-dark-600 !important;
   }
 }
 
