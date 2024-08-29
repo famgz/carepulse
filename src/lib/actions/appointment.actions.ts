@@ -4,8 +4,9 @@ import {
   APPOINTMENT_COLLECTION_ID,
   DATABASE_ID,
   databases,
+  messaging,
 } from '@/lib/appwrite.config';
-import { parseStringify } from '@/lib/utils';
+import { formatDateTime, parseStringify } from '@/lib/utils';
 import { Appointment } from '@/types/appwrite.types';
 import { revalidatePath } from 'next/cache';
 import { ID, Query } from 'node-appwrite';
@@ -93,12 +94,38 @@ export const updateAppointment = async ({
 
     if (!updatedAppointment) throw new Error('Appointment not found');
 
-    // TODO: SMS notification
+    // TODO: Validate Twilio account and setup in .env
+
+    const smsMessage = `
+    Hi, it's CarePulse.
+    ${
+      type === 'schedule'
+        ? `Your appointment has been scheduled for ${formatDateTime(appointment.schedule!).dateTime} with Dr. ${appointment.primaryPhysician}`
+        : `We regret to inform that your appointment has been canceled. Reason: ${appointment.cancellationReason}`
+    }
+    `;
+
+    await sendSMSNotification(userId, smsMessage);
 
     revalidatePath('/admin');
 
     return parseStringify(updatedAppointment);
   } catch (err) {
     console.log(err);
+  }
+};
+
+export const sendSMSNotification = async (userId: string, content: string) => {
+  try {
+    const message = await messaging.createSms(
+      ID.unique(),
+      content,
+      [],
+      [userId]
+    );
+
+    return parseStringify(message);
+  } catch (error) {
+    console.log(error);
   }
 };
