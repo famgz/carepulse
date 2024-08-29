@@ -24,7 +24,7 @@ interface AppointmentFormProps {
   patientId: string;
   type: 'create' | 'cancel' | 'schedule';
   appointment?: Appointment;
-  setIsOpen: (open: boolean) => void;
+  setIsOpen?: (open: boolean) => void;
 }
 
 const AppointmentForm = ({

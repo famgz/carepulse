@@ -2,6 +2,7 @@ import RegisterForm from '@/components/forms/register-form';
 import { getUser } from '@/lib/actions/patient.actions';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import * as Sentry from '@sentry/nextjs';
 
 interface Props {
   params: {
@@ -13,6 +14,8 @@ const UserRegisterPage = async ({ params: { userId: userId } }: Props) => {
   const user = await getUser(userId);
 
   if (!user) return notFound();
+
+  Sentry.metrics.set('user_view_register', user.name);
 
   return (
     <div className="flex h-screen max-h-screen">

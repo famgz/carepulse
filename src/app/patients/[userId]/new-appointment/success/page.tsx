@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Doctors } from '@/constants';
 import { getAppointment } from '@/lib/actions/appointment.actions';
+import { getUser } from '@/lib/actions/patient.actions';
 import { formatDateTime } from '@/lib/utils';
+import * as Sentry from '@sentry/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -11,12 +13,15 @@ const SuccessPage = async ({
   searchParams: { appointmentId },
 }: SearchParamProps) => {
   const appointment = await getAppointment(appointmentId as string);
+  const user = await getUser(userId);
 
-  if (!appointment) return notFound();
+  if (!(appointment && user)) return notFound();
 
   const doctor = Doctors.find(
     (doc) => doc.name === appointment?.primaryPhysician
   );
+
+  Sentry.metrics.set('user_view_appointment-success', user.name);
 
   return (
     <div className="flex h-screen max-h-screen px-[5%]">
