@@ -4,12 +4,9 @@ import { DataTable } from '@/components/table/data-table';
 import { getRecentAppointmentList } from '@/lib/actions/appointment.actions';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 
 const AdminPage = async () => {
   const appointments = await getRecentAppointmentList();
-
-  if (!appointments) return notFound();
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-14">
@@ -35,28 +32,34 @@ const AdminPage = async () => {
           </p>
         </section>
 
-        <section className="admin-stat">
-          <StatCard
-            type="appointments"
-            count={appointments.scheduledCount}
-            label="Scheduled appointments"
-            icon="/assets/icons/appointments.svg"
-          />
-          <StatCard
-            type="pending"
-            count={appointments.pendingCount}
-            label="Pending appointments"
-            icon="/assets/icons/pending.svg"
-          />
-          <StatCard
-            type="canceled"
-            count={appointments.canceledCount}
-            label="canceled appointments"
-            icon="/assets/icons/canceled.svg"
-          />
-        </section>
+        {appointments ? (
+          <>
+            <section className="admin-stat">
+              <StatCard
+                type="appointments"
+                count={appointments.scheduledCount}
+                label="Scheduled appointments"
+                icon="/assets/icons/appointments.svg"
+              />
+              <StatCard
+                type="pending"
+                count={appointments.pendingCount}
+                label="Pending appointments"
+                icon="/assets/icons/pending.svg"
+              />
+              <StatCard
+                type="canceled"
+                count={appointments.canceledCount}
+                label="canceled appointments"
+                icon="/assets/icons/canceled.svg"
+              />
+            </section>
 
-        <DataTable columns={columns} data={appointments.documents} />
+            <DataTable columns={columns} data={appointments.documents} />
+          </>
+        ) : (
+          <p>No appointments were found</p>
+        )}
       </main>
     </div>
   );

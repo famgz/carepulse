@@ -77,13 +77,6 @@ export const getRecentAppointmentList = async () => {
   }
 };
 
-interface UpdateAppointmentProps {
-  appointmentId: string;
-  userId: string;
-  appointment: Appointment;
-  type: string;
-}
-
 export const updateAppointment = async ({
   appointmentId,
   userId,
