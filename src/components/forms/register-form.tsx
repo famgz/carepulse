@@ -79,7 +79,7 @@ const RegisterForm = ({ user }: Props) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex-1 space-y-12"
+        className="flex-1 space-y-6"
       >
         <section className="space-y-4">
           <h1 className="header">Welcome</h1>
