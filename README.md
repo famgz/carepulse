@@ -13,20 +13,20 @@ Application built with NextJS for managing medical appointments with admin inter
 [![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)](https://www.twilio.com/)
 
 
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/0.jpg" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/1.jpg" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/2.jpg" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/3.jpg" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/4.jpg" alt="screenshot" style="border: 1px solid #ddd;" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/0.jpg" alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/1.jpg" alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/2.jpg" alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/3.jpg" alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/4.jpg" alt="screenshot" />
 
-<div style="display: flex; gap: 1rem; max-width: 768px; flex-wrap: wrap; justify-content: left">
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m0.png" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m1.png" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m2.png" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m3.png" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m4.png" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m5.png" alt="screenshot" style="border: 1px solid #ddd;" />
-<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m6.png" alt="screenshot" style="border: 1px solid #ddd;" />
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: left">
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m0.png" width='250px' alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m1.png" width='250px' alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m2.png" width='250px' alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m3.png" width='250px' alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m4.png" width='250px' alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m5.png" width='250px' alt="screenshot" />
+<img src="https://raw.githubusercontent.com/famgz/famgz/main/presentations/carepulse/m6.png" width='250px' alt="screenshot" />
 </div>
 
 
